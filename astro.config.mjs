@@ -8,9 +8,10 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'ToramameSeven',
-			// social: {
-			// 	github: 'https://github.com/withastro/starlight',
-			// },
+			// favicon: '/favicon.svg',
+			social: {
+				github: 'https://github.com/toramameseven',
+			},
 			sidebar: [
 				{
 					label: 'guides',
