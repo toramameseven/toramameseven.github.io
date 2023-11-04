@@ -1,6 +1,14 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+export const locales = {
+	root: {
+		label: 'English',
+		lang: 'en', // langはルートロケールに必要です
+	},
+	ja: { label: '日本語', lang: 'ja' },
+};
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://toramameseven.github.io',
@@ -9,19 +17,10 @@ export default defineConfig({
 		starlight({
 			title: 'ToramameSeven',
 			// favicon: '/favicon.svg',
+			locales,
 			social: {
 				github: 'https://github.com/toramameseven',
 			},
-			sidebar: [
-				{
-					label: 'guides',
-					autogenerate: { directory: 'guides' },
-				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
-			],
 		}),
 	],
 });
