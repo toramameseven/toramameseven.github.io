@@ -10,6 +10,7 @@ export const locales = {
 };
 
 // https://astro.build/config
+// https://starlight.astro.build/reference/configuration/
 export default defineConfig({
 	site: 'https://toramameseven.github.io',
 	trailingSlash: "always",
@@ -18,6 +19,10 @@ export default defineConfig({
 			title: 'ToramameSeven',
 			// favicon: '/favicon.svg',
 			locales,
+			components: {
+				// Override the default `SocialIcons` component.
+				Search: './src/components/Searchx.astro',
+			  },
 			social: {
 				github: 'https://github.com/toramameseven',
 			},
